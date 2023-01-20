@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Vissza az igazi tervhez</h1>
-    <p>Hellóka</p>
-    <a href="./about.html">Rólam</a>
-</body>
+  </head>
+  <body>
+    <div class="navigation__container">
+        <h1>Alul kiválaszthatod a linkeket, hogy mit szeretnék csinálni.</h1>
+        <nav class="navigation__box">
+        <ul>
+            <li class="navigation__item">
+            <a href="./warehouse.html">Raktárkészlet</a>
+            <a href="./processing.html">Anyagfeldolgozás</a>
+            <a href="./client.html">Kliensek</a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+
+    <div class="input__container">
+        <h1>Itt adhatod meg az anyagokat amit beküldeni szeretnél.</h1>
+        <form class="form__box" action="./about/materials/new" method="post">
+            <input name="name" type="text" placeholder="Add meg az anyag nevét" />
+            <input name="color" type="text" placeholder="Add meg az anyag színét" />
+            <input name="quantity" type="number" placeholder="Add meg az anyag mennyiségét"/>
+            <input class="submit__button" type="submit" value="Beküldés" />
+        </form>
+    </div>
+  </body>
 </html>

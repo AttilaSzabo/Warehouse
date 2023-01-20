@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #82a43a;
+}
+
+/* Navigációs rész felül */
+
+.navigation__container h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.navigation__box {
+  width: 100%;
+}
+
+.navigation__item {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation__item a {
+  font-size: 1.2rem;
+  color: black;
+  background-color: white;
+  padding: 5px;
+  margin: 0 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  transition: 0.3s;
+}
+
+.navigation__item a:hover,
+.submit__button:hover {
+  transform: translateY(-2px);
+}
+
+/* Input rész alul */
+
+.input__container h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form__box {
+  display: flex;
+  justify-content: center;
+}
+
+.form__box input {
+  width: 320px;
+  margin: 10px 10px 0px 10px;
+  border: none;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 5px black;
+}
+
+.form__box .submit__button {
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px black;
+  transition: 0.3s;
+  cursor: pointer;
+}
