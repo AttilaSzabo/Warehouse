@@ -1,16 +1,20 @@
+
+
 fetch('http://localhost:8000/about/materials')
     .then(data => data.json())
-    .then(materials => {
-        const materialsItem =
-            materials
-                .map(material => `
-                    <td> ${JSON.stringify(material.name)}</td>
-                    <td>${JSON.stringify(material.color)}</td>
-                    <td> ${JSON.stringify(material.quantity)}e</td>
-                `)
-                .join('')
+    .then(data => {
+        if (data.length > 0) {
+            let template = ""
+            
+            data.forEach((u) => {
+                template += "<tr>"
+                template += "<td>" + u.id + ";" + "</td>"
+                template += "<td>" + u.name + "</td>"
+                template += "<td>" + u.color + "</td>"
+                template += "<td>" + Number(u.quantity).toFixed(2) + " " + "meter" +  "</td></tr>"
+            })
 
-            document.querySelector('.palladion__materials')
-                .innerHTML = materialsItem;
+            document.getElementById('palladion__materials').innerHTML = template
+        }
     })
     .catch(console.error)
