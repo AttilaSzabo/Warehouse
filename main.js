@@ -62,5 +62,5 @@ app.post('/about/materials/new', (request, response) => {
         color: request.body.color,
         quantity: request.body.quantity
     });
-    response.send({status:true});
-})
+});
+
