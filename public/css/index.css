@@ -42,15 +42,36 @@ body {
     transform: translateY(-2px);
 }
 
-/* Input rész alul */
+/* Szelekció */
+
+.select__container {
+    display: flex;
+    justify-content: center;
+}
+
+/* */
+
+/* Input rész */
 
 .input__container h1 {
     text-align: center;
     margin-top: 50px;
 }
 
+.select__box {
+    width: 270px;
+    height: 30px;
+    text-align: center;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
 .form__box {
     display: flex;
+    flex-direction: column;
+
     justify-content: center;
 }
 

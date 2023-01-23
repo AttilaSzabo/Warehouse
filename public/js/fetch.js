@@ -1,5 +1,3 @@
-
-
 fetch('http://localhost:8000/about/materials')
     .then(data => data.json())
     .then(data => {
@@ -11,6 +9,7 @@ fetch('http://localhost:8000/about/materials')
                 template += "<td>" + u.id + ";" + "</td>"
                 template += "<td>" + u.name + "</td>"
                 template += "<td>" + u.color + "</td>"
+                template += "<td>" + u.colorCode + "</td>"
                 template += "<td>" + Number(u.quantity).toFixed(2) + " " + "meter" +  "</td></tr>"
             })
 
@@ -18,3 +17,10 @@ fetch('http://localhost:8000/about/materials')
         }
     })
     .catch(console.error)
+
+let select = document.querySelectorAll('.select__box')
+let button = document.querySelectorAll('.button')
+
+button.addEventListener('click', () => {
+    alert("hello")
+})

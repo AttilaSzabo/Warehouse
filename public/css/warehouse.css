@@ -84,6 +84,7 @@
 
 .Anyagok__container {
       width: 600px;
+      margin: 0 auto;
 }
 
 .megnevezes th {
@@ -91,6 +92,8 @@
       border: 1px solid black;
 }
 
-.palladion__materials tr {
-      background-color: black;
+.box   {
+      background-color: rgb(161, 161, 161);
+      border-bottom: 1px solid rgb(88, 88, 88);
+      text-align: center;
 }

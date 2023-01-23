@@ -9,26 +9,45 @@
   </head>
   <body>
     <div class="navigation__container">
-        <h1>Alul kiválaszthatod a linkeket, hogy mit szeretnék csinálni.</h1>
-        <nav class="navigation__box">
-        <ul>
-            <li class="navigation__item">
-            <a href="./warehouse.html">Raktárkészlet</a>
-            <a href="./processing.html">Anyagfeldolgozás</a>
-            <a href="./client.html">Kliensek</a>
-            </li>
-        </ul>
-        </nav>
+      <h1>Alul kiválaszthatod a linkeket, hogy mit szeretnék csinálni.</h1>
+      <nav class="navigation__box">
+      <ul>
+        <li class="navigation__item">
+          <a href="./warehouse.html">Raktárkészlet</a>
+          <a href="./processing.html">Anyagfeldolgozás</a>
+          <a href="./client.html">Kliensek</a>
+        </li>
+      </ul>
+      </nav>
     </div>
 
     <div class="input__container">
-        <h1>Itt adhatod meg az anyagokat amit beküldeni szeretnél.</h1>
-        <form class="form__box" action="./about/materials/new" method="post">
-            <input name="name" type="text" placeholder="Add meg az anyag nevét" />
-            <input name="color" type="text" placeholder="Add meg az anyag színét" />
-            <input name="quantity" type="number" placeholder="Add meg az anyag mennyiségét"/>
-            <input class="submit__button" type="submit" value="Beküldés" />
-        </form>
+      <h1>Itt adhatod meg az anyagokat amit beküldeni szeretnél.</h1>
+      <form class="form__box" action="./about/materials/new" method="post">
+        <div class="selection">
+          <div class="select__container">
+            <select class="select__box" name="" id="">
+              <option value="valasztas">Itt tudod kiválasztani az ügyfelet</option>
+              <option value="Palladion">Palladion</option>
+              <option value="linditex">Linditex</option>
+            </select>
+            <select class="select__box" name="" id="">
+              <option value="valasztas">Mit szeretnél megadni</option>
+              <option value="Palladion">Méteráru</option>
+              <option value="linditex">Egyébb anyagok</option>
+            </select>
+          </div>
+        </div>
+        <div class="bemenet">
+          <input class="input" name="name" type="text" placeholder="Anyag neve" />
+          <input class="input" name="color" type="text" placeholder="Anyag színe" />
+          <input class="input" name="colorCode" type="number" placeholder="Anyag kódja" />
+          <input class="input" name="quantity" type="number" placeholder="Anyag mennyisége"/>
+          <input class="submit__button button" type="submit" value="Beküldés" />
+        </div>
+      </form>
     </div>
+    <script src="../main.js"></script>
+    <script src="./js/fetch.js"></script>
   </body>
 </html>
