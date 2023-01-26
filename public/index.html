@@ -24,19 +24,21 @@
         <form class="form__container" action="/api/materials/new" method="post">
     
             <div class="box">
-                <select>
+                <select class="customer_option_js">
+                    <option value="customer">Ügyfélválasztás</option>
                     <option value="Linditex">Linditex</option>
                     <option value="Palladion">Palladion</option>
                 </select>
-                <input readonly="readonly" name="customer" type="text" placeholder="Ügyfél" required>
+                <input class="customer__pushing_js" readonly="readonly" type="text" placeholder="Ügyfél" required>
             </div>
     
             <div class="box">
-                <select>
-                    <option value="Linditex">Méteráru</option>
-                    <option value="Palladion">Egyébb anyag</option>
+                <select class="material_option_js">
+                    <option value="material">Anyagopció</option>
+                    <option value="Méteráru">Méteráru</option>
+                    <option value="Egyébb anyagok">Egyébb anyagok</option>
                 </select>
-                <input readonly="readonly" name="warehousetype" type="text" placeholder="Anyagtípus" required>
+                <input class="material_pushing_js" readonly="readonly"  type="text" placeholder="Anyagtípus" required>
             </div>
     
             <div class="box">
@@ -53,20 +55,21 @@
                 <label>Add meg az anyag színkódját</label>
                 <input name="colorCode" type="number" placeholder="Anyag színkódja" required>
             </div>
+
+            <div class="box">
+                <label>Add meg az anyag szélességét</label>
+                <input name="materialWidth" type="number" placeholder="Anyag színkódja" required>
+            </div>
     
             <div class="box">
                 <label>Add meg mennyi van raktáron</label>
                 <input name="quantity" type="number" placeholder="Raktármennyiség" required>
             </div>
     
-            <input class="submit__button" type="submit" value="Beküldés">
+            <input class="submit__button submit_button_js" type="submit" value="Beküldés">
         </form>
     </main>
-
-    <footer>
-        
-    </footer>
     
-    <script src="../main.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
