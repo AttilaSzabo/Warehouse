@@ -1,78 +1,36 @@
 const express = require('express');
 const app = express();
+const port = 8080;
 
-/* Ezzel elérhetővé teszem a küldö html, css elemeket */
 app.use(express.static('public'))
-
-/* Ezzel küldöm be a JSON failokat anélkül, hogy elkellene végeznem valamiféle beállításokat */
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
-const port = 8000;
+app.listen(port)
 
-valamiVan = () => {
-    console.log(`A szerver elindult ${port}`)
-}
-
-app.listen(port, valamiVan)
-
-const palladion = [
-    {
-        id: 1,
-        name: "Twin system ",
-        color: "Schwarzblau",
-        colorCode: 125,
-        quantity: 120
-    },
-    {
-        id: 2,
-        name: "Twin system ",
-        color: "Rot",
-        colorCode: 125,
-        quantity: 120
-    },
-    {
-        id: 3,
-        name: "Twin system ",
-        color: "Gold",
-        colorCode: 125,
-        quantity: 120
-    },
+let materials = [
 ]
 
-const Linditex = []
+let id = 1;
 
-app.get('/about/materials', (request, response) => {
-    console.log(`Mégegy hívás ${request.url}`)
-    response.send (palladion)
-});
+app.get('/api/materials', (req, res) => {
+    res.send(materials)
+})
 
-app.get('/about/materials/:id', (request, response) => {
-    const id = Number.parseInt(request.params.id, 20)
-    const kereses = palladion.find((material) => material.id === id)
-    if (kereses === 'undefined') {
-        response.sendError(404)
+app.post('/api/materials/new', (req, res) => {
+    let customer = req.body.customer;
+
+    if (customer.toLowerCase() !== "linditex" && customer.toLowerCase() !== "palladion") {
+        res.send({nemjó: "Nemjó"})
     } else {
-        response.send(kereses)
-    }
-});
-
-app.post('/about/materials/new', (request, response) => {
-    let name = request.body.name
-    let color = request.body.color
-    let colorCode = request.body.colorCode
-    let quantity = request.body.quantity
-    let valasztas = request.body.valasztas
-    
-    if (name = "" || color == "" || colorCode =="" || quantity == "") {
-    } else if (valasztas.value = "valasztas") {
-    } else {
-        palladion.push({
-            id: palladion.length +1,
-            name: request.body.name,
-            color: request.body.color,
-            colorCode: request.body.colorCode,
-            quantity: request.body.quantity
+        materials.push({
+            id: id,
+            customer: req.body.customer,
+            material: req.body.material,
+            color: req.body.color,
+            colorCode: req.body.colorCode,
+            quantity: req.body.quantity
         });
-    };
-});
+    }
+    id +=1;
+})

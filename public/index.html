@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
-  </head>
-  <body>
-    <div class="navigation__container">
-      <h1>Alul kiválaszthatod a linkeket, hogy mit szeretnék csinálni.</h1>
-      <nav class="navigation__box">
-      <ul>
-        <li class="navigation__item">
-          <a href="./warehouse.html">Raktárkészlet</a>
-          <a href="./processing.html">Anyagfeldolgozás</a>
-          <a href="./client.html">Kliensek</a>
-        </li>
-      </ul>
-      </nav>
-    </div>
+</head>
+<body>
+    <header class="header__container">
+        <nav>
+            <ul>
+                <li class="navigation">
+                    <a href="">Raktárkészlet</a>
+                    <a href="">Rendelés</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main__container">
+        <h1>Töltsd ki az űrlapot az anyag beküldéséhez</h1>
+        <form class="form__container" action="/api/materials/new" method="post">
+    
+            <div class="box">
+                <select>
+                    <option value="Linditex">Linditex</option>
+                    <option value="Palladion">Palladion</option>
+                </select>
+                <input readonly="readonly" name="customer" type="text" placeholder="Ügyfél" required>
+            </div>
+    
+            <div class="box">
+                <select>
+                    <option value="Linditex">Méteráru</option>
+                    <option value="Palladion">Egyébb anyag</option>
+                </select>
+                <input readonly="readonly" name="warehousetype" type="text" placeholder="Anyagtípus" required>
+            </div>
+    
+            <div class="box">
+                <label> Meg kell adnod az anyag nevét</label>
+                <input name="material" type="text" placeholder="Anyag neve" required>
+            </div>
+    
+            <div class="box">
+                <label>Meg kell adnod az anyag színét</label>
+                <input name="color" type="text" placeholder="Anyag színe" required>
+            </div>
+    
+            <div class="box">
+                <label>Add meg az anyag színkódját</label>
+                <input name="colorCode" type="number" placeholder="Anyag színkódja" required>
+            </div>
+    
+            <div class="box">
+                <label>Add meg mennyi van raktáron</label>
+                <input name="quantity" type="number" placeholder="Raktármennyiség" required>
+            </div>
+    
+            <input class="submit__button" type="submit" value="Beküldés">
+        </form>
+    </main>
 
-    <div class="input__container">
-      <h1>Itt adhatod meg az anyagokat amit beküldeni szeretnél.</h1>
-      <form class="form__box" action="./about/materials/new" method="post">
-        <div class="selection">
-          <div class="select__container">
-            <select class="select__box" name="" id="">
-              <option value="valasztas">Itt tudod kiválasztani az ügyfelet</option>
-              <option value="Palladion">Palladion</option>
-              <option value="linditex">Linditex</option>
-            </select>
-            <select class="select__box" name="" id="">
-              <option value="valasztas">Mit szeretnél megadni</option>
-              <option value="Palladion">Méteráru</option>
-              <option value="linditex">Egyébb anyagok</option>
-            </select>
-          </div>
-        </div>
-        <div class="bemenet">
-          <input class="input" name="name" type="text" placeholder="Anyag neve" />
-          <input class="input" name="color" type="text" placeholder="Anyag színe" />
-          <input class="input" name="colorCode" type="number" placeholder="Anyag kódja" />
-          <input class="input" name="quantity" type="number" placeholder="Anyag mennyisége"/>
-          <input class="submit__button button" type="submit" value="Beküldés" />
-        </div>
-      </form>
-    </div>
+    <footer>
+        
+    </footer>
+    
     <script src="../main.js"></script>
-    <script src="./js/fetch.js"></script>
-  </body>
+</body>
 </html>

@@ -2,95 +2,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
 }
 
 body {
-    background-color: #82a43a;
+    background-color: #daba55;
 }
 
-/* Navigációs rész felül */
+/* Header section */
+.header__container {
+    /*border: 1px solid white;*/
+    padding: 30px 10px;
+    background-color: #020202;
 
-.navigation__container h1 {
-    text-align: center;
-    margin: 10px 0;
 }
 
-.navigation__box {
-    width: 100%;
-}
-
-.navigation__item {
+.navigation {
+    /*border: 1px solid white;*/
     display: flex;
     justify-content: center;
 }
 
-.navigation__item a {
-    font-size: 1.2rem;
-    color: black;
-    background-color: white;
-    padding: 5px;
-    margin: 0 20px;
+.navigation a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(252, 252, 252);
+    padding: 10px 15px;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    transition: 0.3s;
+    font-weight: 400;
+    font-size: 1.1rem;
+    transition: 0.4s;
 }
 
-.navigation__item a:hover,
-.submit__button:hover {
-    transform: translateY(-2px);
+.navigation a:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 10px rgb(253, 253, 253);
 }
+/**********************************************************/
 
-/* Szelekció */
-
-.select__container {
-    display: flex;
-    justify-content: center;
-}
-
-/* */
-
-/* Input rész */
-
-.input__container h1 {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.select__box {
-    width: 270px;
-    height: 30px;
-    text-align: center;
-    margin: 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-}
-
-.form__box {
+/* Main section */
+.main__container {
+    /*border: 1px solid black;*/
     display: flex;
     flex-direction: column;
-
     justify-content: center;
+    align-items: center;
+    padding: 30px 0;
 }
 
-.form__box input {
-    width: 320px;
-    margin: 10px 10px 0px 10px;
-    border: none;
+.main__container h1 {
+    margin: 20px 0;
+}
+
+.form__container {
+    /*border: 1px solid black;*/
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+
+.box {
+    border: 1px solid black;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    background-color: rgb(13, 5, 43);
     padding: 10px;
-    color: black;
-    background-color: white;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 2px 2px 5px black;
 }
 
-.form__box .submit__button {
-    width: 120px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px black;
-    transition: 0.3s;
-    cursor: pointer;
+.box select {
+    width: 150px;
 }
+
+.box input,
+.box select {
+    color: black;
+    border: none;
+    background-color: whitesmoke;
+    color: #020202;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.box label {
+    color: #daba55;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 90%;
+}
+
+.submit__button {
+    margin-top: 10px;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: #020202;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 10px black;
+}
+/**********************************************************/
