@@ -23,7 +23,7 @@ submitButton.addEventListener('click', () => {
 function pushingValue (value, name, valami) {
     Array(value).forEach((e) => {
         if (e.value === valami) {
-            console.log("igen")
+            name.value = ""
         } else {
             console.log(e.value)
             name.value = ""

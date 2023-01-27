@@ -12,8 +12,11 @@
         <nav>
             <ul>
                 <li class="navigation">
-                    <a href="">Raktárkészlet</a>
+                    <a href="/">Főoldal</a>
+                    <a href="./warehouse.html">Raktárkészlet</a>
                     <a href="">Rendelés</a>
+                    <a href="">Árajánlat készítés</a>
+                    <a href="">Kész termékek</a>
                 </li>
             </ul>
         </nav>
@@ -29,7 +32,7 @@
                     <option value="Linditex">Linditex</option>
                     <option value="Palladion">Palladion</option>
                 </select>
-                <input class="customer__pushing_js" readonly="readonly" type="text" placeholder="Ügyfél" required>
+                <input name="customer" class="customer__pushing_js" readonly="readonly" type="text" placeholder="Ügyfél" required>
             </div>
     
             <div class="box">
@@ -38,7 +41,7 @@
                     <option value="Méteráru">Méteráru</option>
                     <option value="Egyébb anyagok">Egyébb anyagok</option>
                 </select>
-                <input class="material_pushing_js" readonly="readonly"  type="text" placeholder="Anyagtípus" required>
+                <input name="type" class="material_pushing_js" readonly="readonly"  type="text" placeholder="Anyagtípus" required>
             </div>
     
             <div class="box">
@@ -69,6 +72,10 @@
             <input class="submit__button submit_button_js" type="submit" value="Beküldés">
         </form>
     </main>
+
+    <footer class="footer">
+        <h4>&copy; Linditex/2023</h4>
+    </footer>
     
     <script src="./js/index.js"></script>
 </body>
