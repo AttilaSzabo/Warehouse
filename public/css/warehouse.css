@@ -68,13 +68,13 @@ body {
 }
 
 .materials__container {
-    /*border: 1px solid white;*/
+    /* border: 1px solid white; */
     padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 800px;
+    width: 95%;
     height: 700px;
     margin: 10px 0;
     border-radius: 5px;
@@ -83,7 +83,7 @@ body {
 
 .materials__container h2 {
     margin-bottom: 15px;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: whitesmoke;
 }
 
@@ -92,17 +92,41 @@ body {
     background-color: whitesmoke;
     /*border: 1px solid black;*/
     width: 90%;
-    height: 90%;
+    height: 100%;
     border-radius: 5px;
+    padding: 10px;
 }
 
 .materials__section h4 {
+    margin: 10px 0;
     text-align: center;
     color: black;
     font-size: 2rem;
 }
 /**********************************************************/
 
+/* Table section */
+.table__container {
+    width: 100%;
+}
+
+.table__box {
+    background-color: rgb(177, 168, 168);
+    text-align: center;
+}
+
+.table__box th {
+    border: 1px solid black;
+    padding: 3px 10px;
+}
+
+.table__box td {
+    border: 1px solid black;
+    padding: 3px 10px;
+}
+
+
+/**********************************************************/
 @media screen and (max-width: 850px) {
 
     body {
@@ -113,12 +137,7 @@ body {
 @media screen and (min-width: 1450px) {
 
     .materials__container {
-        width: 99%;
-    }
-    
-    .container {
-        display: flex;
-        flex-direction: row;
+        width: 95%;
     }
 
     .materials__section {
